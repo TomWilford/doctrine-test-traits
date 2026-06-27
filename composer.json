@@ -1,0 +1,53 @@
+{
+    "name": "tomwilford/doctrine-test-traits",
+    "description": "Traits to facilitate database integration tests with doctrine/dbal and doctrine/migrations",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TomWilford\\DoctrineTestTraits\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TomWilford\\DoctrineTestTraits\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tom Wilford",
+            "email": "hello@jollyblueman.com"
+        }
+    ],
+    "require": {
+        "php": "~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+        "doctrine/dbal": "~4.4.0 || ~3.10.0",
+        "doctrine/migrations": "~3.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "phpstan/phpstan": "^2.2",
+        "phpunit/phpunit": "^11.0 || ^13.0",
+        "squizlabs/php_codesniffer": "^4.0"
+    },
+    "config": {
+        "sort-packages": true,
+        "process-timeout": 0
+    },
+    "scripts": {
+        "cs:check": "php-cs-fixer fix --dry-run --format=txt --verbose --config=.cs.php --ansi",
+        "cs:fix": "php-cs-fixer fix --config=.cs.php --ansi --verbose",
+        "sniffer:check": "phpcs --standard=phpcs.xml",
+        "sniffer:fix": "phpcbf --standard=phpcs.xml",
+        "stan": "phpstan analyse -c phpstan.neon --no-progress --ansi",
+        "test": "phpunit --configuration phpunit.xml --do-not-cache-result --colors=always --display-warnings --display-deprecations --no-coverage",
+        "test:coverage": "phpunit --configuration phpunit.xml --do-not-cache-result --colors=always --display-warnings --display-deprecations --coverage-text",
+        "test:report": "phpunit --configuration phpunit.xml --do-not-cache-result --colors=always --display-warnings --display-deprecations --coverage-html coverage-report",
+        "test:all": [
+            "@sniffer:check",
+            "@stan",
+            "@test",
+            "@sniffer:check"
+        ]
+    }
+}

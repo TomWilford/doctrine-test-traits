@@ -1,0 +1,52 @@
+name: QA & Tests
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  analysis-and-tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-version: ['8.2', '8.3', '8.4', '8.5']
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-php-${{ matrix.php-version }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-php-${{ matrix.php-version }}-composer-
+
+      - name: Install Dependencies
+        run: |
+          case "${{ matrix.php-version }}" in
+            "8.2"|"8.3")
+              echo "Installing lowest compatible dependencies for PHP ${{ matrix.php-version }}..."
+              composer update --prefer-lowest --prefer-dist --no-progress --no-interaction --ansi
+              ;;
+            *)
+              echo "Installing standard dependencies for PHP ${{ matrix.php-version }}..."
+              composer update --prefer-dist --no-progress --no-interaction --ansi
+              ;;
+          esac
+
+      - name: Run All Quality Assurance & Tests
+        run: composer test:all
