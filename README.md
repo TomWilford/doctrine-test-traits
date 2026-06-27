@@ -22,7 +22,8 @@ This will install the library (and `doctrine/dbal` and `doctrine/migrations` if 
 
 ## Usage
 
-> **Warning**: this library relies on a `doctrine/migrations` class that is marked as internal (`MigratorConfiguration`).
+> [!WARNING]
+> This library relies on a `doctrine/migrations` class that is marked as internal (`MigratorConfiguration`).
 The use of this class is confirmed as working with `3.9.7`, but the behaviour could change in a later version and
 break this.
 
@@ -59,10 +60,10 @@ $migrationsConfig = new \Doctrine\Migrations\Configuration\Migration\JsonFile('/
 // yaml
 $migrationsConfig = new \Doctrine\Migrations\Configuration\Migration\YamlFile('/path/to/migrations.yml');
 
-//xml
+// xml
 $migrationsConfig = new \Doctrine\Migrations\Configuration\Migration\XmlFile('/path/to/migrations.xml');
 
-//raw array
+// raw array
 $migrationsConfig = new \Doctrine\Migrations\Configuration\Migration\ConfigurationArray([
     'table_storage' => [
         // etc
@@ -90,8 +91,8 @@ protected function tearDown(): void
 }
 ```
 
-`doctrine-test-traits` will find your migrations from your `doctrine/migrations` configuration and run them up to the
-`latest` version alias before each test method is executed; then drop each table after each test method is executed.
+`doctrine-test-traits` will find your migration classes from your `doctrine/migrations` configuration and run them up to
+the `latest` version alias before each test method is executed; then drop each table after each test method is executed.
 
 ### Fixtures
 To populate your test database with data your integration tests can interact with...
@@ -122,7 +123,7 @@ class TestTableFixture implements DatabaseTestFixtureInterface
 }
 ```
 
-Instantiate the concrete fixture when configuring your `DatabaseTestContext` and pass it to the context inside an
+Instantiate the concrete fixture when configuring your `DatabaseTestContext` and pass it to the context, within an
 instance of `DatabaseTestFixtureDto`. `DatabaseTestFixtureDto` can accept
 as many `DatabaseTestFixtureInterface` instances as you require
 ```php
@@ -134,7 +135,7 @@ protected function setUp(): void
         $connection,
         $migrationsConfig,
         new DatabaseTestFixtureDto(
-            new TestTableFixture()
+            new TestTableFixture()//, new OtherTableFixture()
         )
     );
 }
@@ -193,5 +194,4 @@ in `setUpBeforeClass` and `tearDownAfterClass`.
 
 
 ## License
-
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
