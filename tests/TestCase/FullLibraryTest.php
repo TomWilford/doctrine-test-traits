@@ -49,7 +49,7 @@ class FullLibraryTest extends TestCase
         $schemaManager = $connection->createSchemaManager();
 
         $this->assertTrue(
-            $schemaManager->tableExists('test_table')
+            $schemaManager->tablesExist(['test_table'])
         );
     }
 
