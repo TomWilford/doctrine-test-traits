@@ -3,6 +3,12 @@
     "description": "Traits to facilitate database integration tests with doctrine/dbal and doctrine/migrations",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "phpunit",
+        "test",
+        "traits",
+        "doctrine"
+    ],
     "autoload": {
         "psr-4": {
             "TomWilford\\DoctrineTestTraits\\": "src/"
