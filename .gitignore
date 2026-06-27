@@ -7,4 +7,3 @@ composer.phar
 migrations.php
 migrations-db.php
 coverage-report
-.github/
