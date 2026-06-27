@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Test\Fixture\Migration;
+namespace TomWilford\DoctrineTestTraits\Test\Fixture\Migration;
 
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Types\Types;

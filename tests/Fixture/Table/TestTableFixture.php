@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Test\Fixture\Table;
+namespace TomWilford\DoctrineTestTraits\Test\Fixture\Table;
 
-use TomWilford\DbalTestFixtures\Fixture\DatabaseTestFixtureInterface;
+use TomWilford\DoctrineTestTraits\Fixture\DatabaseTestFixtureInterface;
 
 class TestTableFixture implements DatabaseTestFixtureInterface
 {

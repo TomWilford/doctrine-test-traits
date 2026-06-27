@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Fixture;
+namespace TomWilford\DoctrineTestTraits\Fixture;
 
 /**
  * Stores fixtures needed for integration tests in a neat injectable package.

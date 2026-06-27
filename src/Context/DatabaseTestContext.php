@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Context;
+namespace TomWilford\DoctrineTestTraits\Context;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\Migrations\Configuration\Migration\ConfigurationLoader;
-use TomWilford\DbalTestFixtures\Fixture\DatabaseTestFixtureDto;
+use TomWilford\DoctrineTestTraits\Fixture\DatabaseTestFixtureDto;
 
 /**
  * A simple value object with all the details required to use DatabaseTestTrait.

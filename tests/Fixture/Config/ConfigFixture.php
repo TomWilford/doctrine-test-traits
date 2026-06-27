@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Test\Fixture\Config;
+namespace TomWilford\DoctrineTestTraits\Test\Fixture\Config;
 
 class ConfigFixture
 {
@@ -23,7 +23,7 @@ class ConfigFixture
                     ],
 
                     'migrations_paths' => [
-                        'TomWilford\DbalTestFixtures\Test\Fixture\Migration' => dirname(__DIR__) . '/Migration',
+                        'TomWilford\DoctrineTestTraits\Test\Fixture\Migration' => dirname(__DIR__) . '/Migration',
                     ],
 
                     'all_or_nothing' => true,

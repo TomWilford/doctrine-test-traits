@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Trait;
+namespace TomWilford\DoctrineTestTraits\Trait;
 
 use Doctrine\Migrations\Metadata\MigrationPlanList;
 use Doctrine\Migrations\MigratorConfiguration;
@@ -51,7 +51,7 @@ trait DatabaseSchemaTestTrait
     /**
      * Creates the MigratorConfiguration using a dummy ArrayInput as we are not in a cli context.
      *
-     * Note: MigratorConfiguration is marked as internal so this may break in the future
+     * Warning: MigratorConfiguration is marked as internal, so this may break in the future.
      */
     public function buildMigratorConfiguration(): MigratorConfiguration
     {

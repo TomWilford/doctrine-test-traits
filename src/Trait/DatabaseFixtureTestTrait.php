@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Trait;
+namespace TomWilford\DoctrineTestTraits\Trait;
 
 use LogicException;
 use RuntimeException;
 use Throwable;
-use TomWilford\DbalTestFixtures\Fixture\DatabaseTestFixtureInterface;
+use TomWilford\DoctrineTestTraits\Fixture\DatabaseTestFixtureInterface;
 
 /**
  * Persists all the database fixtures to the database.

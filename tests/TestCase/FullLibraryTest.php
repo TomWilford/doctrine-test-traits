@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Test\TestCase;
+namespace TomWilford\DoctrineTestTraits\Test\TestCase;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use Doctrine\DBAL\Schema\Table;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\CoversTrait;
 use PHPUnit\Framework\TestCase;
-use TomWilford\DbalTestFixtures\Context\DatabaseTestContext;
-use TomWilford\DbalTestFixtures\Fixture\DatabaseTestFixtureDto;
-use TomWilford\DbalTestFixtures\Test\Trait\FullLibraryAppTestTrait;
-use TomWilford\DbalTestFixtures\Trait\DatabaseConnectionTestTrait;
-use TomWilford\DbalTestFixtures\Trait\DatabaseFixtureTestTrait;
-use TomWilford\DbalTestFixtures\Trait\DatabaseSchemaTestTrait;
-use TomWilford\DbalTestFixtures\Trait\DatabaseSetupTestTrait;
-use TomWilford\DbalTestFixtures\Trait\DatabaseTearDownTrait;
-use TomWilford\DbalTestFixtures\Trait\DatabaseTestTrait;
+use TomWilford\DoctrineTestTraits\Context\DatabaseTestContext;
+use TomWilford\DoctrineTestTraits\Fixture\DatabaseTestFixtureDto;
+use TomWilford\DoctrineTestTraits\Test\Trait\FullLibraryAppTestTrait;
+use TomWilford\DoctrineTestTraits\Trait\DatabaseConnectionTestTrait;
+use TomWilford\DoctrineTestTraits\Trait\DatabaseFixtureTestTrait;
+use TomWilford\DoctrineTestTraits\Trait\DatabaseSchemaTestTrait;
+use TomWilford\DoctrineTestTraits\Trait\DatabaseSetupTestTrait;
+use TomWilford\DoctrineTestTraits\Trait\DatabaseTearDownTrait;
+use TomWilford\DoctrineTestTraits\Trait\DatabaseTestTrait;
 
 #[CoversTrait(DatabaseTestTrait::class)]
 #[CoversTrait(DatabaseSetupTestTrait::class)]

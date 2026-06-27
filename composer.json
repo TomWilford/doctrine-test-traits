@@ -1,16 +1,16 @@
 {
-    "name": "tomwilford/dbal-test-fixtures",
+    "name": "tomwilford/doctrine-test-traits",
     "description": "Traits to facilitate database integration tests with doctrine/dbal and doctrine/migrations",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "TomWilford\\DbalTestFixtures\\": "src/"
+            "TomWilford\\DoctrineTestTraits\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TomWilford\\DbalTestFixtures\\Test\\": "tests/"
+            "TomWilford\\DoctrineTestTraits\\Test\\": "tests/"
         }
     },
     "authors": [

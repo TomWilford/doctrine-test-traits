@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Fixture;
+namespace TomWilford\DoctrineTestTraits\Fixture;
 
 /**
  * The shape a database fixture entry requires to add records when setting up.

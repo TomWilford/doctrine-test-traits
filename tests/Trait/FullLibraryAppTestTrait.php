@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Test\Trait;
+namespace TomWilford\DoctrineTestTraits\Test\Trait;
 
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Tools\DsnParser;
 use Doctrine\Migrations\Configuration\Migration\ConfigurationArray;
-use TomWilford\DbalTestFixtures\Context\DatabaseTestContext;
-use TomWilford\DbalTestFixtures\Fixture\DatabaseTestFixtureDto;
-use TomWilford\DbalTestFixtures\Test\Fixture\Config\ConfigFixture;
-use TomWilford\DbalTestFixtures\Test\Fixture\Table\TestTableFixture;
-use TomWilford\DbalTestFixtures\Trait\DatabaseTestTrait;
+use TomWilford\DoctrineTestTraits\Context\DatabaseTestContext;
+use TomWilford\DoctrineTestTraits\Fixture\DatabaseTestFixtureDto;
+use TomWilford\DoctrineTestTraits\Test\Fixture\Config\ConfigFixture;
+use TomWilford\DoctrineTestTraits\Test\Fixture\Table\TestTableFixture;
+use TomWilford\DoctrineTestTraits\Trait\DatabaseTestTrait;
 
 /**
  * Helper class that configures the DatabaseTestTrait and implements it in phpunit's setUp and tearDown methods

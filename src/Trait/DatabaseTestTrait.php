@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Trait;
+namespace TomWilford\DoctrineTestTraits\Trait;
 
 use Doctrine\DBAL\Exception;
 use LogicException;
 use RuntimeException;
-use TomWilford\DbalTestFixtures\Context\DatabaseTestContext;
+use TomWilford\DoctrineTestTraits\Context\DatabaseTestContext;
 
 /**
  * The entrypoint trait for initialising and destroying the database tables.

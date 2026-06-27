@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomWilford\DbalTestFixtures\Trait;
+namespace TomWilford\DoctrineTestTraits\Trait;
 
 use LogicException;
 use RuntimeException;
