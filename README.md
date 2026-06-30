@@ -22,11 +22,10 @@ This will install the library (and `doctrine/dbal` and `doctrine/migrations` if 
 
 ## Usage
 
-> [!WARNING]
-> This library relies on a `doctrine/migrations` class that is marked as internal (`MigratorConfiguration`).
-The use of this class is confirmed as working with `3.9.7`, but the behaviour could change in a later version and
-break this.
-
+> **Note**: this library uses `MigratorConfiguration` from `doctrine/migrations`,
+> which is marked as internal. It is used here in the same way the library uses
+> it internally, and has been tested against version `3.9.7`. If a future release
+> of `doctrine/migrations` changes this class, a patch will be released.
 
 ### Migrations
 In a phpunit test, create an instance of the `DatabaseTestContext` class in the `setUp` method, with your doctrine
